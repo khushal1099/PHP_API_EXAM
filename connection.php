@@ -17,17 +17,17 @@
         }
     }
 
-    function insertAuthor($id,$name,$bio,$birthdate){
+    function insertAuthor($name,$bio,$birthdate){
         $this->connect();
     
-        $q= "INSERT INTO `authors`(`id`, `name`, `bio`, `birthdate`) VALUES ('$id','$name','$bio','$birthdate')";
+        $q= "INSERT INTO `authors`(`name`, `bio`, `birthdate`) VALUES ('$name','$bio','$birthdate')";
         $res=mysqli_query($this->conn,$q);
         echo $res;
     }
 
     function updateAuthor($id,$name,$bio,$birthdate){
         $this->connect();
-        $q= "UPDATE `authors` SET `id`='$id',`name`='$name',`bio`='$bio',`birthdate`='$birthdate' WHERE id=$id";
+        $q= "UPDATE `authors` SET id='$id',name='$name',bio='$bio',birthdate='$birthdate' WHERE id='$id'";
         
         $res=mysqli_query($this->conn,$q);
         echo $res;

@@ -22,7 +22,7 @@
     }else{
         $response["result"]="Error Only Get Allow";
     }
-    
+
 
     echo json_encode($response);
 
